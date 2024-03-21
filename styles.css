@@ -1,0 +1,122 @@
+body{
+    background-color: rgb(253, 212, 157);
+}
+
+.intro{
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    /* background-repeat: no-repeat; */
+    height: 650px;
+    padding: 50px;
+}
+
+.registeration-btn{
+    background-color: #123369;
+    border: 3px solid #fff;
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin: 150px 80px 10px;
+    outline: none  !important;
+    padding: 13px 50px;
+    text-decoration: none;
+}
+
+#map {
+    width: 100%;
+    height: 400px;
+  }
+
+  .google-map{
+    padding-bottom: 50%;
+    position: relative;
+  }
+
+  .google-map iframe{
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+  }
+
+  #fixed-element {
+    position: fixed;
+    z-index: 1;
+    bottom: 0; /* Adjust as needed */
+    left: 0; /* Adjust as needed */
+    /* Other styles like width, background color, etc. */
+}
+
+.footer{
+  text-align: center;
+  color: #fff;
+  background-color: #3e4893;
+  font-size: 1em;
+  padding: 10px;
+  margin:0;
+}
+
+.traffic-light {
+  width: 100px;
+  height: 300px;
+  background-color: black;
+  border-radius: 15px;
+  position: relative;
+}
+
+.red-light, .yellow-light, .green-light {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: gray;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 30px;
+  transition: background-color 0.5s;
+}
+
+.red-light {
+  top: 30px;
+}
+
+.yellow-light {
+  top: 130px;
+}
+
+.green-light {
+  top: 230px;
+}
+
+.red-light.on {
+  background-color: red !important;
+}
+
+.yellow-light.on {
+  background-color: yellow;
+}
+
+.green-light.on {
+  background-color: green;
+}
+
+/* Animation */
+@keyframes traffic-light-sequence {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.traffic-light.on {
+  animation: traffic-light-sequence 3s ease infinite;
+}
+
